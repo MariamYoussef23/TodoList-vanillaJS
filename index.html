@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS script-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--Link to be able to use bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <!--Container for background color of page -->
+    <div class="container-fluid  bg-secondary bg-gradient vh-100">
+        <div class="container">
+            <header class="p-5 text-center">
+                <h1>Todo List </h1>
+            </header>
+
+            <form class="d-md-flex justify-content-between align-items-center">
+
+                <!-- User input new todo item -->
+                <div class="input-group w-50">
+                    <input type="text" class="form-control todo-input" placeholder="Type your Todo item here">
+                    <button type="submit todo" class="btn btn-dark todo-button">Add Todo item</button>
+                </div>
+                <!--Filtering the todo items -->
+                <select id="todoFilterSelect" name="todos" onchange="filterTodo()" class="form-select form-select-sm w-auto  filter-todo"
+                    aria-label=".form-select-sm example">
+                    <option selected>Filter Todos</option>
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">uncompleted</option>
+                </select>
+        </div>
+        </form>
+
+        <!-- List of todo items -->
+        <div class="todo-group p-5 align-items-center">
+            <ul class="list-group todo-list">
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!--Bootstrap JS Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

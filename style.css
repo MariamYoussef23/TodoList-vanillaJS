@@ -1,0 +1,25 @@
+/* Styling the todo list */
+.list-group-item {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+/*to make a line through completed todo items */
+.completed {
+    text-decoration: line-through;
+    opacity : 0.5;
+}
+
+/*adding animation when deleting todo items */
+.fall {
+    transition: opacity 0.5s; 
+    opacity: 0;
+    
+}
+
+.btn{
+    background-color: rgb(36, 43, 129);
+}
+
