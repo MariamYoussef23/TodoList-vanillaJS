@@ -31,35 +31,23 @@
             <header class="p-5 text-center">
                 <h1>Todo List </h1>
             </header>
-            <!--
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex flex-row align-items-center">
-                        <input type="text" class="form-control form-control-lg todo-input" id="exampleFormControlInput1" placeholder="Add new...">
-                        <div>
-                          <button type="button" class="btn btn-primary">Add</button>
-                        </div>
-                      </div>
-                </div>
+    
+            <div class="d-flex flex-row align-items-center">
+                <input type="text" class="form-control todo-input" placeholder="Type your Todo item here">
+                <button type="button" id="todo-button"class="btn btn-dark ms-5 w-25" onclick="addTodo()">Add Todo Item</button>
             </div>
-            
-            -->
-            <form class="d-md-flex justify-content-between align-items-center">
+                
+             
+                
+            <!--Filtering the todo items -->
+            <select id="todoFilterSelect" name="todos" onchange="filterTodo()" class="form-select form-select-sm w-auto  filter-todo"
+                aria-label=".form-select-sm example">
+                <option selected>Filter Todos</option>
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">uncompleted</option>
+            </select>
 
-                <!-- User input new todo item -->
-                <div class="input-group w-50">
-                    <input type="text" class="form-control todo-input" placeholder="Type your Todo item here">
-                    <button type="button" id="todo-button"class="btn btn-dark " onclick="addTodo()">Add Todo item</button>
-                </div>
-                <!--Filtering the todo items -->
-                <select id="todoFilterSelect" name="todos" onchange="filterTodo()" class="form-select form-select-sm w-auto  filter-todo"
-                    aria-label=".form-select-sm example">
-                    <option selected>Filter Todos</option>
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">uncompleted</option>
-                </select>
-            </form>
 
             <!-- List of todo items -->
             <div class="todo-group p-5 align-items-center">
